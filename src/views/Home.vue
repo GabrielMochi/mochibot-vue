@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container fluid class="fill-height pa-0">
+    <v-layout>
+      <v-col>
+      </v-col>
+      <div
+        v-if="$vuetify.breakpoint.lgAndUp"
+        id="info-card"
+        class="primary"
+      >  
+      </div>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+  name: 'Home'
 }
 </script>
+
+<style>
+#info-card {
+  width: 448px;
+}
+</style>
